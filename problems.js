@@ -6,7 +6,7 @@ function reverseText(text) {
     }
     return reversed;
 }
-console.log(reverseText("hello"));
+console.log("Problem 1 :", reverseText("hello"));
 
 
 //Problem 2 : Count Vowel in string
@@ -22,7 +22,7 @@ function countVowels(text) {
     }
     return count;
 }
-console.log(countVowels("programming"));
+console.log("Problem 2 : ", countVowels("programming"));
 
 
 // Problem 3: Check Palindrome
@@ -38,8 +38,8 @@ function isPalindrome(text) {
     }
     return true;
 }
-console.log(isPalindrome("madam"));
-console.log(isPalindrome("hello"));
+console.log("Problem 3 : ", isPalindrome("madam"));
+console.log("Problem 3 : ", isPalindrome("hello"));
 
 
 //problem 4 : find the maximum Number
@@ -52,7 +52,7 @@ function findMaxNum(a) {
     }
     return max;
 }
-console.log(findMaxNum([5, 1, 9, 3]));
+console.log("Problem 4 : ", findMaxNum([5, 1, 9, 3]));
 
 
 //problem 5 : Remove duplicates from an array
@@ -72,18 +72,18 @@ function removeDuplicates(a) {
     }
     return uniqueArray;
 }
-console.log(removeDuplicates([1, 2, 2, 3, 4, 4]));
+console.log("Problem 5 : ", removeDuplicates([1, 2, 2, 3, 4, 4]));
 
 
 //problem 6 : Sum of all numbers in array
-function sumArray(a) {
+function sumArray(arr) {
     let sum = 0;
-    for (let i = 0; i < a.length; i++) {
-        sum = sum + a[i];
+    for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
     }
     return sum;
 }
-console.log(sumArray([[1, 2, 2, 3, 4, 4]]));
+console.log("Problem 6 : ", sumArray([1, 2, 3, 4]));
 
 
 //problem 7 : FInd Even Number in an array
@@ -96,11 +96,32 @@ function findEvenNum(a) {
     }
     return evenNum;
 }
-console.log(findEvenNum([1, 2, 3, 4, 5, 6]));
+console.log("Problem 7 : ", findEvenNum([1, 2, 3, 4, 5, 6]));
 
 
 // Problem 8: Capitalize First Letter of Each Word
+function capitalizeWords(str) {
+    let result = "";
+    let makeCapital = true;
 
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+
+        if (makeCapital && char >= 'a' && char <= 'z') {
+            result += String.fromCharCode(char.charCodeAt(0) - 32);
+            makeCapital = false;
+        } else {
+            result += char;
+            if (char === " ") {
+                makeCapital = true;
+            } else {
+                makeCapital = false;
+            }
+        }
+    }
+    return result;
+}
+console.log("Problem 8 : ", capitalizeWords("hello world"));
 
 
 // Problem 9: Find the Factorial of a Number
@@ -111,8 +132,7 @@ function factorial(n) {
     }
     return result;
 }
-
-console.log("Problem 9:", factorial(5)); // 120
+console.log("Problem 9 : ", factorial(5));
 
 
 // Problem 10: PingPong Challenge
@@ -129,5 +149,5 @@ function pingPong() {
         }
     }
 }
-console.log("P10:");
+console.log("Problem 10 : ");
 pingPong();
