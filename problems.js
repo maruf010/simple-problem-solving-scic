@@ -137,17 +137,22 @@ console.log("Problem 9 : ", factorial(5));
 
 // Problem 10: PingPong Challenge
 function pingPong() {
+    let output = "";
     for (let i = 1; i <= 20; i++) {
         if (i % 3 === 0 && i % 5 === 0) {
-            console.log("PingPong");
+            output += "PingPong";
         } else if (i % 3 === 0) {
-            console.log("Ping");
+            output += "Ping";
         } else if (i % 5 === 0) {
-            console.log("Pong");
+            output += "Pong";
         } else {
-            console.log(i);
+            output += i;
+        }
+        if (i < 20) {
+            output += ",";
         }
     }
+    return output;
 }
-console.log("Problem 10 : ");
-pingPong();
+console.log("Problem 10 :",pingPong());
+
